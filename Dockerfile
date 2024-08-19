@@ -12,6 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Define environment variable for the persistent data path
 ENV DATA_PATH /home/data
+ENV DATABASE $DATA_PATH/your_database.db
 
 # Ensure the /home/data directory exists
 RUN mkdir -p $DATA_PATH
