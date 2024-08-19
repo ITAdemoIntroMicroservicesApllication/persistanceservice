@@ -7,7 +7,6 @@ app = Flask(__name__)
 # Path to SQLite database using environment variable
 DATABASE = os.getenv('DATA_PATH', '/home/data') + '/your_database.db'
 
-# tes test ets    
 
 def init_db():
     with sqlite3.connect(DATABASE) as conn:
