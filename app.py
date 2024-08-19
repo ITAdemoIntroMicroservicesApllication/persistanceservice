@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 # Path to SQLite database using environment variable
-DATABASE_PATH = os.getenv('DATA_PATH', '/home/data') + '/your_database.db'
+DATABASE = os.getenv('DATA_PATH', '/home/data') + '/your_database.db'
 
     
 
