@@ -10,8 +10,11 @@ COPY . /app
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Ensure the /data directory exists
-RUN mkdir -p /home/data
+# Define environment variable for the persistent data path
+ENV DATA_PATH /home/data
+
+# Ensure the /home/data directory exists
+RUN mkdir -p $DATA_PATH
 
 # Make port 80 available to the world outside this container
 EXPOSE 80

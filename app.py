@@ -3,9 +3,11 @@ import sqlite3
 import os
 
 app = Flask(__name__)
-DATABASE = '/home/data/hello_world.db'
 
-# tes tes test
+# Path to SQLite database using environment variable
+DATABASE_PATH = os.getenv('DATA_PATH', '/home/data') + '/your_database.db'
+
+    
 
 def init_db():
     with sqlite3.connect(DATABASE) as conn:
