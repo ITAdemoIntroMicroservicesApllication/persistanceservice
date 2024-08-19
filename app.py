@@ -2,9 +2,6 @@ from flask import Flask, jsonify, request, make_response
 import sqlite3
 import os
 
-# kommentar indsat for at tjekke om et push overskriver den gamle database
-
-
 app = Flask(__name__)
 DATABASE = '/data/hello_world.db'
 
