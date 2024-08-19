@@ -16,8 +16,9 @@ def hello_world():
     with sqlite3.connect(DATABASE) as conn:
         cursor = conn.cursor()
         cursor.execute('SELECT content FROM messages')
-        message = cursor.fetchall()
-        return jsonify(message=message[0])
+        messages = cursor.fetchall()
+        return jsonify(messages=[message[0] for message in messages])
+
 
 @app.route('/add_message', methods=['POST'])
 def add_message():
