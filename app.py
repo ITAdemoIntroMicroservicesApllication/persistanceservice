@@ -5,6 +5,8 @@ import os
 app = Flask(__name__)
 DATABASE = '/home/data/hello_world.db'
 
+# tes tes test
+
 def init_db():
     with sqlite3.connect(DATABASE) as conn:
         conn.execute('CREATE TABLE IF NOT EXISTS messages (id INTEGER PRIMARY KEY AUTOINCREMENT, content TEXT)')
