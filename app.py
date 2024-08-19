@@ -16,7 +16,7 @@ def hello_world():
     with sqlite3.connect(DATABASE) as conn:
         cursor = conn.cursor()
         cursor.execute('SELECT content FROM messages WHERE id=1')
-        message = cursor.fetchone()
+        message = cursor.fetchall()
         return jsonify(message=message[0])
 
 @app.route('/add_message', methods=['POST'])
